@@ -93,19 +93,3 @@ AddEventHandler('fjob:removeLicense', function(id, license)
     TriggerEvent('esx_license:removeLicense', id, license)
     TriggerClientEvent('fjob:Notity', id, locales['removed_license'])
 end)
-
-exports('isBoss', function(job, grade)
-    isBoss = false 
-    for k,v in pairs(Jobs.Jobs) do 
-        if v.job_id == job then 
-            for o,i in pairs(v.grades) do 
-                if (type(grade) == 'number' and grade == i.stage) or (type(grade) == 'string' and grade == i.name) then 
-                    if i.boss ~= nil and i.boss == true then 
-                        isBoss = true 
-                    end 
-                end 
-            end 
-        end 
-    end 
-    return(isBoss)
-end)
