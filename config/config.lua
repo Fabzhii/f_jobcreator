@@ -6,6 +6,10 @@ Config.Command = {
     help = 'Öffne den Job Creator',
 }
 
+Config.Actionsmenu = {
+    type = 'menu', -- radial or menu
+    keybind = 'F6',
+}
 
 Config.DefaultVehicleShopPosition = vector4(228.5, -993.5, -99.9999, 185.0)
 
